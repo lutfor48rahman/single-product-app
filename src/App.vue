@@ -1,30 +1,44 @@
 <template>
-  <nav>
+  <!-- <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </nav>
-  <router-view/>
+  <router-view/> -->
+  <div class="navHead">
+    <p class="name"> Single Product</p>
+   </div>
+   <AboutProductVue></AboutProductVue>
+   <OurProductVue></OurProductVue>
+   <BenefitOurProduct></BenefitOurProduct>
+   <PhotoGalleryVue />
+   <FeedbackVue />
+   <FAQVue />
+   <CustomerInfoVue />
 </template>
 
+<script>
+import AboutProductVue from './views/AboutProduct.vue';
+import OurProductVue from './views/OurProduct.vue';
+import BenefitOurProduct from './views/BenefitOurProduct.vue';
+import PhotoGalleryVue from './views/PhotoGallery.vue';
+import FeedbackVue from './views/Feedback.vue';
+import FAQVue from './views/FAQ.vue';
+import CustomerInfoVue from './views/CustomerInfo.vue';
+export default {
+  components:{AboutProductVue,OurProductVue,BenefitOurProduct,PhotoGalleryVue,FeedbackVue,FAQVue,CustomerInfoVue},
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.navHead{
+  height: 70px;
+  width: 100%;
+  background: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+.navHead .name{
+  font-size: 30px;
 }
 </style>
